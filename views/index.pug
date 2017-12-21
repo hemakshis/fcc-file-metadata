@@ -17,9 +17,8 @@ html
             | 1) I can submit a FormData object that includes a file upload.
           ul
             | 2) When I submit something, I will receive the file size in bytes within the JSON response.
-          ul
-            | 3) Hint: You may want to use this package: 
-            a(href='https://www.npmjs.com/package/multer', target='_blank') Multer
+        Hint: You may want to use this package: 
+          a(href='https://www.npmjs.com/package/multer', target='_blank') Multer
         h3 Upload File
         form(method='POST', action='/api/upload', enctype='multipart/form-data')
           .form-group
