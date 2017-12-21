@@ -1,4 +1,4 @@
-<script type="text/javascript">
+$(document).ready(function(){
   $("#my-file").click(function () {
     $("input[type='file']").trigger('click');
   });
@@ -12,4 +12,4 @@
     val = val + '&nbsp;'
     $(this).siblings('span').html(val);
   });
-</script>
+});
