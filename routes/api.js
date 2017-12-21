@@ -7,17 +7,9 @@ const fs = require('fs');
 
 let File = require('../models/file');
 
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'files/uploads')
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now());
-  }
-});
+var upload = multer({dest: 'uploads/'}).single('user-file');
 
 router.post('/upload', function(req, res){
-  var upload = multer({storage:storage}).single('user-file');
   upload(req, res, function(err){
     if (err) {
       console.log('multer error', err, 'multer error over');
