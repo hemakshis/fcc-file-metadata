@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, viewport-fit=cover')
+    title File Metadata Microservice
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css', integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  body
+    .container
+      h1.text-center FCC API Basejump: File Metadata Microservice
+      .jumbotron
+        h3 User Stories
+        blockquote
+          ul
+            | 1) I can submit a FormData object that includes a file upload.
+          ul
+            | 2) When I submit something, I will receive the file size in bytes within the JSON response.
+          ul
+            | 3) Hint: You may want to use this package: 
+            a(href='https://www.npmjs.com/package/multer', target='_blank') Multer
+        h3 Upload File
+        form(method='POST', action='/api/upload', enctype='multipart/form-data')
+          .form-group
+            button#my-file.btn.btn-outline-dark(type='button')
+              i.fa.fa-file
+              |  Choose File
+            span#fileUpload &nbsp;No file selected &nbsp;
+            input#get-file(type='file', style='display:none;', name='user-file')
+          button#submit.btn.btn-primary(type='submit' disabled) Submit
+    footer.text-center
+      i.fa.fa-code.text-dark
+      |  By Hemakshi Sachdev, 2017 with 
+      i.fa.fa-heart.text-danger
+    ul.text-center
+      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
+        a(href='https://github.com/hemakshis')
+          i.fa.fa-github
+      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
+        a(href='https://www.freecodecamp.org/hemakshis')
+          i.fa.fa-free-code-camp
+      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
+        a(href='https://www.linkedin.com/in/hemakshis')
+          i.fa.fa-linkedin
+    script(language='JavaScript', type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(language='JavaScript', type='text/javascript', src='https://code.jquery.com/ui/1.9.2/jquery-ui.js')
+    script(language='JavaScript', type='text/javascript', src='/js/script.js')

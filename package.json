@@ -1,0 +1,21 @@
+{
+  "name": "my-file",
+  "version": "1.0.0",
+  "description": "A File Metadata Microservice, wherein when a user uploads a file it's details are shown",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Hemakshi Sachdev",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7",
+    "multer": "^1.3.0",
+    "nodemon": "^1.14.1",
+    "pug": "^2.0.0-rc.4"
+  }
+}
