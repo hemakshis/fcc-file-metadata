@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const path = require('path');
 const fs = require('fs');
 
-
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './uploads')

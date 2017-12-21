@@ -24,7 +24,7 @@ db.on('error', function(err){
 });
 
 // Port Number
-const port = process.env.PORT || 8080;
+var port = process.env.PORT || 8080;
 
 // Init App
 var app = express();
