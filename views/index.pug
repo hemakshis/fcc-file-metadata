@@ -45,4 +45,16 @@ html
           i.fa.fa-linkedin
     script(language='JavaScript', type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
     script(language='JavaScript', type='text/javascript', src='https://code.jquery.com/ui/1.9.2/jquery-ui.js')
-    script(language='JavaScript', type='text/javascript', src='/js/script.js')
+    script(type='text/javascript').
+      $("#my-file").click(function () {
+      $("input[type='file']").trigger('click');
+      });
+      $('input[type="file"]').on('change', function() {
+      var val = $(this).val();
+      if (val) {
+      $("#submit").removeAttr('disabled');
+      }
+      val = val.replace('C:\\\fakepath\\', '&nbsp;');
+      val = val + '&nbsp;'
+      $(this).siblings('span').html(val);
+      });

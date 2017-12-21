@@ -17,10 +17,10 @@ var storage = multer.diskStorage({
 let File = require('../models/file');
 
 router.post('/upload', function(req, res){
-  var upload = multer({storage: storage}).single('user-file');
+  var upload = multer({storage:storage}).single('user-file');
   upload(req, res, function(err){
     if (err) {
-      console.log(err);
+      console.log('multer error', err);
     } else {
       let newFile = new File({
         name: req.file.originalname,
