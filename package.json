@@ -4,7 +4,7 @@
   "description": "A File Metadata Microservice, wherein when a user uploads a file it's details are shown",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "start": "node app.js"
   },
   "author": "Hemakshi Sachdev",
   "license": "ISC",
