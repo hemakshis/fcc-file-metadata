@@ -9,7 +9,7 @@ let File = require('../models/file');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, '/files/uploads')
+    cb(null, '../files/uploads')
   },
   filename: function (req, file, cb) {
     cb(null, file.fieldname + '-' + Date.now());
