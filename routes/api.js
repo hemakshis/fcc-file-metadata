@@ -3,13 +3,15 @@ const router = express.Router();
 const multer = require('multer');
 const mongoose = require('mongoose');
 const path = require('path');
+const fs = require('fs');
+
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './uploads')
   },
   filename: function (req, file, cb) {
-    cb(null, Date.now() + '-' + file.originalname + path.extname(file.originalname));
+    cb(null, Date.now() + '-' + file.originalname);
   }
 });
 
@@ -31,7 +33,7 @@ router.post('/upload', function(req, res){
         if (err) throw err;
         console.log('File Uploaded!');
       });
-
+      fs.unlinkSync('./uploads/' + req.file.filename);
       res.json({name:newFile.name,size:newFile.size,date:newFile.date});
     }
   });
