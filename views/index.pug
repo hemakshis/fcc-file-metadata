@@ -7,6 +7,15 @@ html
     title File Metadata Microservice
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css', integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb', crossorigin='anonymous')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    style.
+      footer ul li {
+        font-size: 24px;
+        display: inline-block;
+        padding-right: 3.5%;
+      }
+      .fa-code, .fa-heart {
+        -webkit-text-stroke: 1px;
+      }
   body
     .container
       h1.text-center FCC API Basejump: File Metadata Microservice
@@ -26,7 +35,7 @@ html
         p A JSON output containing all the file details will be displayed in the below URL.
         code https://myfile-hemakshis.herokuapp.com/api/upload
         br
-        code {&quot;name&quot;:&quot;wxyz.jpg&quot;,&quot;size&quot;:66225,&quot;date&quot;:&quot;2017-12-21 16:13:27&quot;,&quot;file&quot;:&quot;f0b87e941714c7beea453e19e3782d5e&quot;}
+        code {"name":"wxyz.jpg","size":66225,"date":"2017-12-21 16:13:27","file":"f0b87e941714c7beea453e19e3782d5e"}
         br
         br
         h3 Upload File
@@ -43,19 +52,20 @@ html
           strong Note:-
           |  The files get deleted right away. All the information stored in database is displayed.
     footer.text-center
-      i.fa.fa-code.text-dark
-      |  By Hemakshi Sachdev, 2017 with 
+      i.fa.fa-code.text-dark.fa-lg
+      |  with 
       i.fa.fa-heart.text-danger
-    ul.text-center
-      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
-        a(href='https://github.com/hemakshis')
-          i.fa.fa-github
-      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
-        a(href='https://www.freecodecamp.org/hemakshis')
-          i.fa.fa-free-code-camp
-      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
-        a(href='https://www.linkedin.com/in/hemakshis')
-          i.fa.fa-linkedin
+      |  By Hemakshi Sachdev, 2017
+      ul.text-center
+        li
+          a(href='https://github.com/hemakshis', title='GitHub')
+            i.fa.fa-github
+        li
+          a(href='https://www.freecodecamp.org/hemakshis', title='FreeCodeCamp')
+            i.fa.fa-free-code-camp
+        li
+          a(href='https://www.linkedin.com/in/hemakshis', title='LinkedIn')
+            i.fa.fa-linkedin
     script(language='JavaScript', type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
     script(language='JavaScript', type='text/javascript', src='https://code.jquery.com/ui/1.9.2/jquery-ui.js')
     script(language='JavaScript', type='text/javascript', src='/js/script.js')
